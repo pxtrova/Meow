@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meow</title>
+  <style>
+    body {
+      background-color: #ffd1dc;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+    }
+    h1 {
+      color: #ff6f91;
+      padding: 10px;
+    }
+    .feed {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px;
+    }
+    .post {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      width: 200px;
+      text-align: center;
+    }
+    .post img {
+      width: 100%;
+      display: block;
+    }
+    .like-btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #ff6f91;
+      cursor: pointer;
+      padding: 10px;
+    }
+    .like-btn:hover {
+      color: #ff3b72;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meow</h1>
+  <div class="feed">
+    <!-- Example Post -->
+    <div class="post">
+      <img src="cat1.jpg" alt="Cat 1">
+      <button class="like-btn" onclick="likePost(this)">❤️ Like</button>
+    </div>
+    <div class="post">
+      <img src="cat2.jpg" alt="Cat 2">
+      <button class="like-btn" onclick="likePost(this)">❤️ Like</button>
+    </div>
+    <!-- Add more posts -->
+  </div>
+
+  <script>
+    function likePost(button) {
+      button.textContent = "❤️ Liked!";
+      button.style.color = "#ff3b72";
+      button.disabled = true;
+    }
+  </script>
+</body>
+</html>
